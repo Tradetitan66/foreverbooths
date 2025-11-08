@@ -7,8 +7,8 @@ export default function About() {
             <div className="relative order-2 lg:order-1 group">
               <div className="aspect-[4/5] overflow-hidden max-w-md mx-auto">
                 <img
-                  src="/stylish_guests_joyfully_posing_with_forever_booths_photo_booth_at_a_premium_event_sophisticated_att_v6qal5rpwe2w8tiudp0v_11.png"
-                  alt="Guests enjoying Forever Booths at a wedding"
+                  src="/forever_booths_handcrafted_oak_wood_photo_booth_setup_on_tripod_in_a_luxurious_wedding_or_event_spa_5ubacwsz9t5gqchd53k6_0 copy.png"
+                  alt="Forever Booths handcrafted oak photo booth"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
