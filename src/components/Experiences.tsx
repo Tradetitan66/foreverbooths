@@ -70,7 +70,7 @@ export default function Experiences() {
                             ? '/wedding/stylish_guests_joyfully_posing_with_forever_booths_in_oak_wood_photo_booth_at_a_wedding_event_sophi_hxbqsvf9tada7haz4s69_0.png'
                             : index === 1
                             ? '/corporate/stylish_guests_joyfully_posing_with_forever_booths_in_oak_wood_photo_booth_at_a_corporate_event_sop_gwe2wfsw8ncte6x3ocj7_0 copy.png'
-                            : '/stylish_guests_joyfully_posing_with_forever_booths_photo_booth_at_a_premium_event_sophisticated_att_9841xfuajs4crfruzb5s_13.png'
+                            : '/stylish_guests_joyfully_posing_with_forever_booths_in_oak_wood_photo_booth_at_birthday_parties_soph_cyamoyfk0wq5i7fvrb1f_1.png'
                         }
                         alt={experience.title}
                         className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
