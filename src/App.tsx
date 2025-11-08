@@ -38,14 +38,6 @@ function App() {
   return (
     <div className="min-h-screen bg-stone-50">
       <Sidebar activeSection={activeSection} />
-      <div className="fixed top-6 left-6 z-50">
-        <img
-          src="/FOREVER BOOTH NO BG.png"
-          alt="Forever Booths"
-          className="w-16 md:w-20 cursor-pointer hover:opacity-80 transition-opacity"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        />
-      </div>
       <main>
         <Hero />
         <About />

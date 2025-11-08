@@ -41,7 +41,7 @@ export default function Sidebar({ activeSection }: SidebarProps) {
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
             <img
-              src="/forevery_HQ-removebg-preview.png"
+              src="/FOREVER BOOTH NO BG.png"
               alt="Forever Booths"
               className="h-12"
             />
@@ -77,7 +77,7 @@ export default function Sidebar({ activeSection }: SidebarProps) {
         <div className="flex flex-col h-full p-10">
           <div className="mb-16 pt-16">
             <img
-              src="/forevery_HQ-removebg-preview.png"
+              src="/FOREVER BOOTH NO BG.png"
               alt="Forever Booths"
               className="w-32 mx-auto"
             />
