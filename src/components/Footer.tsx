@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8">
             <img
-              src="/forevery_HQ-removebg-preview.png"
+              src="/FOREVER BOOTH NO BG.png"
               alt="Forever Booths"
               className="w-40 mx-auto mb-6"
             />
