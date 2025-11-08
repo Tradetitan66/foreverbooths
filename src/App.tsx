@@ -7,6 +7,7 @@ import Gallery from './components/Gallery';
 import Testimonials from './components/Testimonials';
 import Enquiry from './components/Enquiry';
 import Footer from './components/Footer';
+import AdminPanel from './components/AdminPanel';
 
 function App() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -46,6 +47,7 @@ function App() {
         <Enquiry />
         <Footer />
       </main>
+      <AdminPanel />
     </div>
   );
 }

@@ -1,22 +1,40 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { supabase } from '../lib/supabase';
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [images, setImages] = useState<{ src: string; alt: string }[]>([]);
 
-  const images = [
-    {
-      src: '/forever_booths_handcrafted_oak_wood_photo_booth_setup_on_tripod_in_a_luxurious_wedding_or_event_spa_qmpkxvv5lqwzk0a6e8pn_13.png',
-      alt: 'Handcrafted oak photo booth at luxury wedding venue',
-    },
-    {
-      src: '/stylish_guests_joyfully_posing_with_forever_booths_photo_booth_at_a_premium_event_sophisticated_att_v6qal5rpwe2w8tiudp0v_11.png',
-      alt: 'Guests enjoying Forever Booths photo experience at elegant event',
-    },
-    {
-      src: '/stylish_guests_joyfully_posing_with_forever_booths_photo_booth_at_a_premium_event_sophisticated_att_9841xfuajs4crfruzb5s_13.png',
-      alt: 'Wedding party capturing memories with Forever Booths',
-    },
-  ];
+  useEffect(() => {
+    loadImages();
+  }, []);
+
+  const loadImages = async () => {
+    try {
+      const { data, error } = await supabase.storage
+        .from('gallery-images')
+        .list();
+
+      if (error) throw error;
+
+      const imageData = data
+        .filter(file => file.name.includes('stylish_guests') || file.name.includes('forever_booths_handcrafted'))
+        .map(file => {
+          const { data: urlData } = supabase.storage
+            .from('gallery-images')
+            .getPublicUrl(file.name);
+
+          return {
+            src: urlData.publicUrl,
+            alt: file.name.replace(/_/g, ' ').replace('.png', '').replace('.jpg', '').replace('.jpeg', ''),
+          };
+        });
+
+      setImages(imageData);
+    } catch (error) {
+      console.error('Error loading images:', error);
+    }
+  };
 
   return (
     <section id="gallery" className="py-24 lg:py-32 bg-gradient-to-b from-[#5a2e2e] to-[#4a2020]">

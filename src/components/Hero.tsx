@@ -1,4 +1,37 @@
+import { useState, useEffect } from 'react';
+import { supabase } from '../lib/supabase';
+
 export default function Hero() {
+  const [logoUrl, setLogoUrl] = useState<string>('');
+
+  useEffect(() => {
+    loadLogo();
+  }, []);
+
+  const loadLogo = async () => {
+    try {
+      const { data, error } = await supabase.storage
+        .from('gallery-images')
+        .list();
+
+      if (error) throw error;
+
+      const logoFile = data.find(file =>
+        file.name.toLowerCase().includes('forevery') ||
+        file.name.toLowerCase().includes('logo')
+      );
+
+      if (logoFile) {
+        const { data: urlData } = supabase.storage
+          .from('gallery-images')
+          .getPublicUrl(logoFile.name);
+        setLogoUrl(urlData.publicUrl);
+      }
+    } catch (error) {
+      console.error('Error loading logo:', error);
+    }
+  };
+
   const handleEnquiry = () => {
     window.open('https://n8n.srv1004168.hstgr.cloud/form/7d781480-9074-4d3a-9664-4a58e26163ce', '_blank');
   };
@@ -12,11 +45,13 @@ export default function Hero() {
       <div className="relative z-10 container mx-auto px-6 lg:px-12 py-20">
         <div className="flex justify-center items-center">
           <div className="max-w-2xl text-center">
-            <img
-              src="/forevery_HQ-removebg-preview.png"
-              alt="Forever Booths"
-              className="w-48 md:w-56 mb-12 mx-auto"
-            />
+            {logoUrl && (
+              <img
+                src={logoUrl}
+                alt="Forever Booths"
+                className="w-48 md:w-56 mb-12 mx-auto"
+              />
+            )}
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-stone-50 mb-8 leading-tight">
               memories,
               <br />
