@@ -67,7 +67,7 @@ export default function Experiences() {
                       <img
                         src={
                           index === 0
-                            ? '/stylish_guests_joyfully_posing_with_forever_booths_photo_booth_at_a_premium_event_sophisticated_att_v6qal5rpwe2w8tiudp0v_11.png'
+                            ? '/wedding/stylish_guests_joyfully_posing_with_forever_booths_in_oak_wood_photo_booth_at_a_wedding_event_sophi_hxbqsvf9tada7haz4s69_0.png'
                             : index === 1
                             ? '/forever_booths_luxury_oak_wood_photo_booth_in_an_upscale_corporate_event_setting_sleek_minimal_deco_ygsm5dfs5i1fdq9m49um_0.png'
                             : '/stylish_guests_joyfully_posing_with_forever_booths_photo_booth_at_a_premium_event_sophisticated_att_9841xfuajs4crfruzb5s_13.png'
