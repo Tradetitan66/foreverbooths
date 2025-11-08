@@ -12,7 +12,6 @@ export default function Sidebar({ activeSection }: SidebarProps) {
     { id: 'hero', label: 'Home' },
     { id: 'about', label: 'About' },
     { id: 'experiences', label: 'Experiences' },
-    { id: 'gallery', label: 'Gallery' },
     { id: 'testimonials', label: 'Testimonials' },
     { id: 'enquiry', label: 'Enquiry' },
   ];
