@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -38,7 +37,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-stone-50">
-      <Header />
       <Sidebar activeSection={activeSection} />
       <main>
         <Hero />
