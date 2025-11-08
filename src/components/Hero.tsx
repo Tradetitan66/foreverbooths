@@ -13,11 +13,16 @@ export default function Hero() {
       <div className="relative z-10 container mx-auto px-6 lg:px-12 py-20">
         <div className="flex justify-center items-center">
           <div className="max-w-2xl text-center">
-            <img
-              src="/FOREVER BOOTH NO BG.png"
-              alt="Forever Booths"
-              className="w-48 md:w-56 mb-12 mx-auto"
-            />
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="hover:opacity-80 transition-opacity mx-auto mb-12"
+            >
+              <img
+                src="/FOREVER BOOTH NO BG.png"
+                alt="Forever Booths"
+                className="w-48 md:w-56"
+              />
+            </button>
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-stone-50 mb-8 leading-tight">
               memories,
               <br />

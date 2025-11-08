@@ -40,11 +40,16 @@ export default function Sidebar({ activeSection }: SidebarProps) {
       <header className="hidden md:block fixed top-0 left-0 right-0 z-40 bg-[#5a2e2e]/95 backdrop-blur-sm shadow-lg">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-20">
-            <img
-              src="/FOREVER BOOTH NO BG.png"
-              alt="Forever Booths"
-              className="h-12"
-            />
+            <button
+              onClick={() => scrollToSection('hero')}
+              className="hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/FOREVER BOOTH NO BG.png"
+                alt="Forever Booths"
+                className="h-12"
+              />
+            </button>
 
             <nav>
               <ul className="flex items-center gap-8">
@@ -76,11 +81,16 @@ export default function Sidebar({ activeSection }: SidebarProps) {
       >
         <div className="flex flex-col h-full p-10">
           <div className="mb-16 pt-16">
-            <img
-              src="/FOREVER BOOTH NO BG.png"
-              alt="Forever Booths"
-              className="w-32 mx-auto"
-            />
+            <button
+              onClick={() => scrollToSection('hero')}
+              className="hover:opacity-80 transition-opacity mx-auto"
+            >
+              <img
+                src="/FOREVER BOOTH NO BG.png"
+                alt="Forever Booths"
+                className="w-32"
+              />
+            </button>
           </div>
 
           <nav className="flex-1">

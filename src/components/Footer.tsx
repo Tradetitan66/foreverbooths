@@ -6,11 +6,16 @@ export default function Footer() {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8">
-            <img
-              src="/FOREVER BOOTH NO BG.png"
-              alt="Forever Booths"
-              className="w-40 mx-auto mb-6"
-            />
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="hover:opacity-80 transition-opacity mx-auto mb-6 block"
+            >
+              <img
+                src="/FOREVER BOOTH NO BG.png"
+                alt="Forever Booths"
+                className="w-40"
+              />
+            </button>
             <p className="text-stone-400 font-light italic text-sm mb-8">
               Beautifully made. Unforgettable moments.
             </p>
