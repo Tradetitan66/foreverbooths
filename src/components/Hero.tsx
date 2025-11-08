@@ -9,14 +9,9 @@ export default function Hero() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-amber-900/20 via-transparent to-transparent" />
       </div>
 
-      <div className="relative z-10 container mx-auto px-6 lg:px-12 py-20">
+      <div className="relative z-10 container mx-auto px-6 lg:px-12 py-20 pt-32">
         <div className="flex justify-center items-center">
           <div className="max-w-2xl text-center">
-            <img
-              src="/FOREVER BOOTH NO BG.png"
-              alt="Forever Booths"
-              className="w-64 md:w-80 mb-12 mx-auto"
-            />
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-stone-50 mb-8 leading-tight">
               memories,
               <br />
